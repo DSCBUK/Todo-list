@@ -38,7 +38,10 @@ class item{
     }
 
     removeTodo(itemBox, todo){
-        //TODO: implements removing todo
+		itemBox.parentNode.removeChild(itemBox)
+		const index = todos.indexOf(todo)
+		todos.splice(index, 1)
+		window.localStorage.setItem("todos", JSON.stringify(todos))
     }
 }
 
